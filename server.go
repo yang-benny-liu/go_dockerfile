@@ -12,7 +12,7 @@ func main() {
 
 	// Serve files from static folder
 	//	http.Handle("/", http.FileServer(http.Dir("./static")))
-	http.Handle("/", http.FileServer(http.Dir("./")))
+	http.Handle("/", http.FileServer(http.Dir("/")))
 
 	// Serve api /hi
 	http.HandleFunc("/hi", func(w http.ResponseWriter, r *http.Request) {
