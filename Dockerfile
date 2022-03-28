@@ -1,4 +1,5 @@
 FROM golang AS builder
+USER root
 WORKDIR /go/src/github.com/redhat-developer-demos/go_dockerfile/
 COPY ./server.go ./static/. ./go.mod ./
 RUN go get -d -v golang.org/x/net/html  
